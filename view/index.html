@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ML Model Output</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ML Model Prediction</h1>
+      <p>Upload your image below to get predictions:</p>
+      <div class="input-form">
+        <input type="file" id="imageInput" accept="image/*" />
+        <button onclick="getPrediction()">Predict</button>
+      </div>
+      <div class="prediction" id="prediction">
+        <h3>Prediction Result:</h3>
+        <p id="resultText">No prediction yet.</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
