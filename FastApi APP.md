@@ -13,7 +13,7 @@ Kirim gambar melalui endpoint untuk diklasifikasikan oleh model.
 Gambar diubah ukurannya menjadi dimensi yang sesuai dan dinormalisasi untuk prediksi.
 
 ### 🧐 **Prediksi Cerdas**
-Model **MobileNetV2** yang sudah dilatih digunakan untuk menentukan kelas gambar dengan akurasi tinggi.
+Model **MobileNetV2** atau **ResNet50** yang sudah dilatih digunakan untuk menentukan kelas gambar dengan akurasi tinggi.
 
 ### 🔒 **Dukungan CORS**
 Dikonfigurasi untuk mendukung permintaan lintas asal, mempermudah integrasi dengan frontend.
