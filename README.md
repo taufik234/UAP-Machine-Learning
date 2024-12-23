@@ -67,6 +67,11 @@ Gambar diatas menunjukkan *Classification Report* dari Model setelah dilakukan p
 
 Matriks di atas adalah hasil dari model yg telah di gunakan bisa dilihat semakin pekat warnanya maka semakin bagus hasil prediksinya
 
+
+## Api documentation
+Untuk informasi lebih lanjut tentang api termasuk bagaimana api digunakan, lihat [FastApi APP.md](FastApi APP.md).
+ 
+
 ## Local Web Deployment dan Steamlit
 
 ### Tampilan Local Web Prediction Result
@@ -78,6 +83,8 @@ Matriks di atas adalah hasil dari model yg telah di gunakan bisa dilihat semakin
 
 ![image](assets/filament-steamlit.png)
 ![image](assets/cartridge-fuse-steamlit.png)
+
+
 
 ## Author 👨‍💻
 
