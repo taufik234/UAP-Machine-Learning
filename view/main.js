@@ -1,3 +1,17 @@
+document.getElementById("imageInput").addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  const uploadedImage = document.getElementById("uploadedImage");
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      uploadedImage.src = e.target.result;
+      uploadedImage.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
 async function getPrediction() {
   const imageInput = document.getElementById("imageInput").files[0];
   if (!imageInput) {
@@ -25,6 +39,6 @@ async function getPrediction() {
     resultText.textContent = `Class: ${result.class}, Confidence: ${(result.confidence * 100).toFixed(2)}%`;
   } catch (error) {
     alert("Error: " + error.message);
-    console.error("Detailed error:", error); // Log the error in the console
+    console.error("Detailed error:", error);
   }
 }
