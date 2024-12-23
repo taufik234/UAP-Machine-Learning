@@ -1,79 +1,80 @@
 # FastAPI ML Model Prediction API
 
-Proyek ini menggunakan FastAPI untuk klasifikasi gambar dengan model pembelajaran mesin yang sudah dilatih sebelumnya. API ini memproses gambar yang diunggah, memprediksi kelasnya, dan mengembalikan kelas tersebut beserta tingkat kepercayaan.
+Proyek ini menggunakan **FastAPI** untuk klasifikasi gambar dengan model pembelajaran mesin yang telah dilatih sebelumnya. API ini memungkinkan pengguna mengunggah gambar, memprediksi kelasnya, dan mendapatkan hasil prediksi beserta tingkat kepercayaannya.
 
 ---
 
-## Fitur
+## Fitur Utama
 
-- **Unggah Gambar:** Mengunggah gambar untuk diklasifikasikan.
-- **Pra-pemrosesan Gambar:** Menyiapkan gambar untuk prediksi dengan mengubah ukuran dan normalisasi.
-- **Prediksi Model:** Menggunakan model MobileNetV2 yang telah dilatih untuk mengklasifikasikan gambar.
-- **Dukungan CORS:** Dikonfigurasi untuk memungkinkan permintaan lintas asal.
+### 🔗 **Unggah Gambar**
+Kirim gambar melalui endpoint untuk diklasifikasikan oleh model.
 
----
+### 🕊️ **Pra-pemrosesan Gambar**
+Gambar diubah ukurannya menjadi dimensi yang sesuai dan dinormalisasi untuk prediksi.
 
-## Persyaratan
+### 🧐 **Prediksi Cerdas**
+Model **MobileNetV2** yang sudah dilatih digunakan untuk menentukan kelas gambar dengan akurasi tinggi.
 
-- Python 3.8+
-- FastAPI
-- TensorFlow/Keras
-- OpenCV
-- NumPy
-- Uvicorn
+### 🔒 **Dukungan CORS**
+Dikonfigurasi untuk mendukung permintaan lintas asal, mempermudah integrasi dengan frontend.
 
 ---
 
-## Instalasi
+## Persyaratan Sistem
 
-1. Klon repositori:
+- Python 3.8 atau lebih baru
+- Framework: **FastAPI**
+- Library ML: **TensorFlow/Keras**
+- Utility: **OpenCV**, **NumPy**
+- Server: **Uvicorn**
 
+---
+
+## Langkah Instalasi
+
+1. **Kloning Repositori**
    ```bash
    git clone <repository_url>
    cd <repository_directory>
    ```
 
-
-2. Instal dependensi:
-
+2. **Instal Dependensi**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Pastikan file model yang sudah dilatih (`model_MNV2.h5`) atau (`model_resnet50.h5`) ditempatkan di direktori `Model`.
+3. **Tambahkan Model**
+   Pastikan file model terlatih seperti `model_MNV2.h5` atau `model_resnet50.h5` berada di direktori `Model`.
 
 ---
 
-## Penggunaan
+## Cara Penggunaan
 
-### Jalankan Server
+### 🔄 Menjalankan Server
 
-1. Masuk Ke folder api:
-
+1. Pindah ke direktori `api`:
    ```bash
    cd api
    ```
 
+2. Jalankan aplikasi:
+   ```bash
+   python app.py
+   ```
+   Server akan aktif di **`http://127.0.0.1:8000`**.
 
-2. Jalankan aplikasi menggunakan Python:
-
-```bash
-python app.py
-```
-
-API akan tersedia di `http://127.0.0.1:8000`.
+---
 
 ### Endpoint API
 
-#### **POST /predict**
-
-Unggah gambar untuk diklasifikasikan.
+#### 🔎 **POST /predict**
+Unggah gambar untuk mendapatkan prediksi klasifikasi.
 
 **Permintaan:**
-- `image` (file): File gambar yang akan diunggah untuk prediksi.
+- **Parameter**: `image` (file gambar)
 
 **Respon:**
-- Objek JSON yang berisi kelas yang diprediksi dan confident.
+- Objek JSON yang berisi hasil prediksi kelas dan tingkat kepercayaan.
 
 **Contoh Respon:**
 ```json
@@ -87,45 +88,44 @@ Unggah gambar untuk diklasifikasikan.
 
 ## Penggunaan API
 
-### Endpoint Prediksi
+Gunakan endpoint prediksi sebagai berikut:
 
 ```http
 POST http://127.0.0.1:8000/predict
 ```
 
-| Parameter | Tipe | Deskripsi |
-|-----------|------|-----------|
-| `image` | `string` | **Wajib**. ID gambar yang akan diprediksi |
+| Parameter | Tipe    | Deskripsi                             |
+|-----------|---------|---------------------------------------|
+| `image`   | `file`  | **Wajib.** Gambar yang akan diprediksi |
 
+---
 
 ## Fungsi Internal
 
-### `preprocess_image(image_path: Path) -> np.ndarray`
+### 🕎 `preprocess_image(image_path: Path) -> np.ndarray`
+Mengubah ukuran gambar menjadi **224x224 piksel** dan menormalisasi nilai piksel sebelum prediksi.
 
-Menyiapkan gambar untuk prediksi dengan mengubah ukurannya menjadi 224x224 piksel dan menormalisasi nilai pikselnya.
-
-### `predict_class(image_path: Path) -> Union[dict, None]`
-
-Memprediksi kelas gambar menggunakan model MobileNetV2 atau ResNet50 yang telah dilatih. Mengembalikan dictionary yang berisi kelas yang diprediksi dan confident.
+### 🕊️ `predict_class(image_path: Path) -> dict`
+Menggunakan model MobileNetV2 atau ResNet50 untuk memprediksi kelas gambar. Mengembalikan hasil dalam bentuk dictionary.
 
 ---
 
 ## Middleware
 
-Aplikasi menggunakan `CORSMiddleware` untuk mengizinkan permintaan dari asal mana pun. Hal ini sangat berguna untuk integrasi frontend.
+Aplikasi menggunakan **`CORSMiddleware`** untuk mendukung integrasi frontend. Middleware ini memungkinkan permintaan lintas asal untuk memperluas fungsionalitas API.
 
 ---
 
 ## Penanganan Kesalahan
 
-- Unggahan gambar tidak valid atau format yang tidak didukung akan mengembalikan `400 Bad Request`.
-- Masalah server internal akan mengembalikan `500 Internal Server Error`.
+- **400 Bad Request**: Jika gambar yang diunggah tidak valid atau formatnya tidak didukung.
+- **500 Internal Server Error**: Jika terjadi kesalahan server saat memproses permintaan.
 
 ---
 
-## Informasi Tambahan
+## Kelas yang Didukung Model
 
-Model mendukung klasifikasi kelas berikut:
+Model mendukung prediksi untuk kategori berikut:
 
 - Electrolytic-capacitor
 - LED
