@@ -69,7 +69,7 @@ Matriks di atas adalah hasil dari model yg telah di gunakan bisa dilihat semakin
 
 
 ## Api documentation
-Untuk informasi lebih lanjut tentang api termasuk bagaimana api digunakan, lihat [FastApi APP.md](FastApi APP.md).
+Untuk informasi lebih lanjut tentang api termasuk bagaimana api digunakan, lihat [FastApi APP.md](https://github.com/taufik234/UAP-Machine-Learning/blob/main/FastApi%20APP.md).
  
 
 ## Local Web Deployment dan Steamlit
