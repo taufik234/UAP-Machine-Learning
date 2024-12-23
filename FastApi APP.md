@@ -145,5 +145,11 @@ Model mendukung prediksi untuk kategori berikut:
 - Semiconductor-diode
 - Solenoid
 - Step-down-transformer
-
 ---
+## Dokumentasi Tambahan
+
+Untuk informasi lebih lanjut tentang proyek ini, termasuk bagaimana model diterapkan dan hasil evaluasinya, lihat [README UAP Klasifikasi Otomatis Electronic Components](https://github.com/taufik234/UAP-Machine-Learning/blob/b52072d029410cc5ba5f67a784f19fe34f65db38/README.md).
+
+## Author 👨‍💻
+
+- [@taufik234](https://github.com/taufik234)
