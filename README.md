@@ -27,18 +27,18 @@ Hasil dari MobilenetV2 yang telah dibangun adalah sebagai berikut :
 
 Berikut adalah hasil dari MobilenetV2 Model yang telah dibangun :
 
-![image](https://github.com/RahinaBintang/RPS-Classification/blob/3e40ed59be32456eb4de90c79ed0c9f1ab31f84e/assets/CNN_acc.png)
+![image](assets/grafik-mobilenet.png)
 
 Plot diatas menunjukkan bahwa training acc dapat diatas **80%**, namun validation acc nya pada rentang **40 hingga 60%**.
 
 Plot diatas menunjukkan bahwa loss dari training set mengalami penurunan dari **2.0** hingga **0.6**, sedangkan val_loss dengan rentang loss antara **1.6 stabil hingga 1.2**.
 
-![image](https://github.com/RahinaBintang/RPS-Classification/blob/6f64fbd6c815604bade74c3638a03cffdf60de8d/assets/cnn_model_classification_report.png)
+![image](assets/f1-score-mobilenet.png)
 
 Gambar diatas merupakan *Classification Report* dari Model setelah dilakukan *predict* terhadap *Testing Set*. Dapat dilihat bahwa Akurasinya mencapai **66%** dengan hasil prediksi tertinggi pada label *'cartridge-fuse'* dapat di **87%** dan hasil terendah pada label *'microchip'* dapat di **41%**
 
 
-![image](https://github.com/RahinaBintang/RPS-Classification/blob/6f64fbd6c815604bade74c3638a03cffdf60de8d/assets/cnn_model_classification_report.png)
+![image](assets/matrik-mobilenet.png)
 
 Matriks di atas adalah hasil dari model yg telah di gunakan bisa dilihat semakin pekat warnanya maka semakin bagus hasil prediksinya
 
@@ -49,32 +49,35 @@ Preprocessing yang dilakukan antara lain adalah resizing **(224,224)**, lalu res
 
 **Modelling & Evaluation**
 
-Berikut hasil dari Model setelah dilakukan *Fine-Tuning* menggunakan dataset yang digunakan :
+Berikut hasil dari Model:
 
-![image](https://github.com/RahinaBintang/RPS-Classification/blob/558bab4e15a2eb63b924d00953009864e88059be/assets/Inception_acc.png)
+![image](assets/grafik-resnet.png)
 
 Plot diatas menunjukkan bahwa *training_acc* meningkat dari **15%** sampai dengan **50%** , namun *val_acc* nya mengalami fluktuasi.
 
 
 Dapat dilihat pada plot loss diatas. *Training dan Val Loss* sama - sama turun, namun val_loss cenderung melakukan fluktuasi.
 
-![image](https://github.com/RahinaBintang/RPS-Classification/blob/558bab4e15a2eb63b924d00953009864e88059be/assets/inception_model_classification_report.png)
+![image](assets/f1-score-resnet.png)
 
 Gambar diatas menunjukkan *Classification Report* dari Model setelah dilakukan predict terhadap *Testing Set*. Terlihat bahwa Model lebih jelek dari MobilenetV2 Model dalam generalisasi data hanya mendapatkan Akurasi sebesar **40%** yg dimana MobilenetV2 mendapatkan Akurasi sebesar **66%**.
 
 
+![image](assets/matrik-resnet.png)
 
+Matriks di atas adalah hasil dari model yg telah di gunakan bisa dilihat semakin pekat warnanya maka semakin bagus hasil prediksinya
 
-## Local Web Deployment
+## Local Web Deployment dan Steamlit
 
-### Tampilan HomePage Prediction Result
+### Tampilan Local Web Prediction Result
 
-![image](https://github.com/RahinaBintang/RPS-Classification/blob/acad73dca7d4d8ca7e0a29add50b4cbb6addc189/assets/Home.png)
+![image](assets/web-led.png)
+![image](assets/web-microcip.png)
 
 ### Tampilan Steamlit Prediction Result
 
-![image](https://github.com/RahinaBintang/RPS-Classification/blob/acad73dca7d4d8ca7e0a29add50b4cbb6addc189/assets/Upload%20Image.png)
-
+![image](assets/filament-steamlit.png)
+![image](assets/cartridge-fuse-steamlit.png)
 
 ## Author 👨‍💻
 
