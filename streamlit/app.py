@@ -30,7 +30,7 @@ labels = {
 
 def load_model():
     model = tf.keras.models.load_model(
-        'Model/model_MNV2.h5')
+        '../Model/model_MNV2.h5')
     return model
 
 
