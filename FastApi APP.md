@@ -1,6 +1,6 @@
-# FastAPI ML Model Prediction API
+# 🔥 FastAPI ML Model Prediction API 🔥
 
-Proyek ini menggunakan **FastAPI** untuk klasifikasi gambar dengan model pembelajaran mesin yang telah dilatih sebelumnya. API ini memungkinkan pengguna mengunggah gambar, memprediksi kelasnya, dan mendapatkan hasil prediksi beserta tingkat kepercayaannya.
+Proyek ini menggunakan **FastAPI** untuk klasifikasi gambar dengan model pembelajaran mesin yang telah dilatih sebelumnya. API ini memungkinkan pengguna mengunggah gambar, memprediksi kelasnya, dan mendapatkan hasil prediksi beserta tingkat akurasinya.
 
 ---
 
@@ -74,7 +74,7 @@ Unggah gambar untuk mendapatkan prediksi klasifikasi.
 - **Parameter**: `image` (file gambar)
 
 **Respon:**
-- Objek JSON yang berisi hasil prediksi kelas dan tingkat kepercayaan.
+- Objek JSON yang berisi hasil prediksi kelas dan tingkat akurasi.
 
 **Contoh Respon:**
 ```json
