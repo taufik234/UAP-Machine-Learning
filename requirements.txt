@@ -4,11 +4,4 @@ tensorflow
 pandas
 seaborn
 matplotlib
-keras
-tensorflow.keras
-tensorflow.keras.preprocessing.image
-tensorflow.keras.models
-tensorflow.keras.layers
-tensorflow.keras.applications
-tensorflow.keras.callbacks
-sklearn.metrics
+tensorflow
