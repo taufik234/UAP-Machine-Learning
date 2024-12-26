@@ -5,7 +5,6 @@ pandas
 seaborn
 matplotlib
 keras
-sklearn
 tensorflow.keras
 tensorflow.keras.preprocessing.image
 tensorflow.keras.models
