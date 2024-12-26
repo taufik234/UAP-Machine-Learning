@@ -1,7 +1,6 @@
 streamlit
 numpy
 tensorflow
-cv2
 fastapi
 fastapi.responses
 fastapi.middleware.cors
