@@ -1,13 +1,9 @@
 streamlit
 numpy
 tensorflow
-fastapi
-fastapi.responses
-fastapi.middleware.cors
 pandas
 seaborn
 PIL
-termcolor
 matplotlib
 keras
 sklearn
