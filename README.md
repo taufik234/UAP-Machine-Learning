@@ -84,7 +84,7 @@ Untuk informasi lebih lanjut tentang api termasuk bagaimana api digunakan, lihat
 ![image](assets/filament-steamlit.png)
 ![image](assets/cartridge-fuse-steamlit.png)
 
-
+link : https://uap-machine-learning-nxb3hvon4tjahnx9thbzlc.streamlit.app
 
 ## Author 👨‍💻
 
